@@ -1,6 +1,7 @@
 var go_btn_num = document.getElementById("num_btn");
 var num_result = document.getElementById("num_result");
 var usernum = document.getElementById("usernum");
+var go_btn_year = document.getElementById("");
 go_btn_num.addEventListener("click", function () {
     sendNumberRequest();
 });
@@ -18,7 +19,7 @@ function sendNumberRequest() {
     })
         .done(function (data) {
         var json = JSON.parse(data);
-        num_result.innerHTML = "Is" + json.text;
+        num_result.innerHTML = "Is " + json.text;
     })
         .fail(function (error) {
         num_result.innerHTML = "Something went horribly wrong";
